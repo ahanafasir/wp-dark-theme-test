@@ -13,7 +13,7 @@ wp_username = os.getenv("WP_USERNAME") #Fetch username into a variable from .env
 wp_password = os.getenv("WP_PASSWORD") #Fetch password into a variable from .env
 
 # Set the path to your Chrome WebDriver executable
-webdriver_path = 'path/to/chromedriver'
+webdriver_path = '.test\chromedriver-win64\chromedriver.exe'
 
 # URL of your local WordPress site's admin panel
 admin_url = 'http://localhost/test-site/wp-admin/'

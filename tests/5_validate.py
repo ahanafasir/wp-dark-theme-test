@@ -15,6 +15,9 @@ wp_password = os.getenv("WP_PASSWORD") #Fetch password into a variable from .env
 # Replace with your WordPress website URL
 URL = 'http://localhost/test-site'
 
+# Set the path to your ChromeDriver executable
+chromedriver_path = '.test\chromedriver-win64\chromedriver.exe'
+
 # Initialize the Chrome WebDriver
 driver = webdriver.Chrome()
 

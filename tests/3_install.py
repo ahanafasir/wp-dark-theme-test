@@ -14,7 +14,7 @@ wp_username = os.getenv("WP_USERNAME") #Fetch username into a variable from .env
 wp_password = os.getenv("WP_PASSWORD") #Fetch password into a variable from .env
 
 # Set the path to your ChromeDriver executable
-chromedriver_path = 'path/to/chromedriver'
+chromedriver_path = '.test\chromedriver-win64\chromedriver.exe'
 
 # Create a new Chrome browser instance
 driver = webdriver.Chrome()

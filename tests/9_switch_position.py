@@ -12,6 +12,9 @@ load_dotenv() #load dotenv
 wp_username = os.getenv("WP_USERNAME") #Fetch username into a variable from .env
 wp_password = os.getenv("WP_PASSWORD") #Fetch password into a variable from .env
 
+# Set the path to your ChromeDriver executable
+chromedriver_path = '.test\chromedriver-win64\chromedriver.exe'
+
 # Set up the WebDriver (Chrome in this example)
 driver = webdriver.Chrome()
 

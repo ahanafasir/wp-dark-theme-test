@@ -15,8 +15,8 @@ wp_password = os.getenv("WP_PASSWORD") #Fetch password into a variable from .env
 # Set your WordPress admin URL and credentials
 admin_url = "http://localhost/test-site/wp-admin"
 
-# Initialize the web driver (replace 'chromedriver_path' with the path to your ChromeDriver executable)
-chromedriver_path = "path/to/chromedriver"
+# Set the path to your ChromeDriver executable
+chromedriver_path = '.test\chromedriver-win64\chromedriver.exe'
 driver = webdriver.Chrome()
 
 # Navigate to the WordPress admin login page
