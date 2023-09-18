@@ -57,14 +57,14 @@ custom_span.click()
 # Wait for the "Custom" span element to be clickable
 time.sleep(2)  # Adjust the sleep time as needed
 
-# # Locate the slider input element using JavaScript
-# slider_input = driver.execute_script('return document.querySelector("#wp_dark_mode_switch\\[switcher_scale\\]")')
+# Locate the slider input element using JavaScript
+slider_input = driver.execute_script('return document.querySelector("#wp_dark_mode_switch\\[switcher_scale\\]")')
 
-# # Use JavaScript to set the value of the slider to 220
-# driver.execute_script("arguments[0].value = '220'", slider_input)
+# Use JavaScript to set the value of the slider to 220
+driver.execute_script("arguments[0].value = '220'", slider_input)
 
-# # Trigger a change event to simulate user interaction
-# driver.execute_script("var event = new Event('change'); arguments[0].dispatchEvent(event);", slider_input)
+# Trigger a change event to simulate user interaction
+driver.execute_script("var event = new Event('change'); arguments[0].dispatchEvent(event);", slider_input)
 
 
 parent_element = driver.find_element(By.ID, 'wp_dark_mode_switch')

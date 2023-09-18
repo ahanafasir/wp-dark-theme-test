@@ -51,16 +51,30 @@ wait.until(EC.presence_of_element_located((By.ID, "wp_dark_mode_switch-tab")))
 # # Click the third switch style
 # third_switch_style.click()
 
-parent_element = driver.find_element(By.ID, 'wp_dark_mode_switch')
+try:
+# Wait for the label element to be visible
+    label_element = WebDriverWait(driver, 20).until(
+        EC.visibility_of_element_located((By.CSS_SELECTOR, 'label.image-choose-opt.active'))
+    )
+    
+    # Click the label element to select the radio button
+    label_element.click()
 
-# Find the button element with ID 'save_settings' within the parent element
-button_element = parent_element.find_element(By.ID, 'save_settings')
+    parent_element = driver.find_element(By.ID, 'wp_dark_mode_switch')
 
-button_element.click()
+    # Find the button element with ID 'save_settings' within the parent element
+    button_element = parent_element.find_element(By.ID, 'save_settings')
 
-# Wait for 10 seconds
-driver.implicitly_wait(10)
+    button_element.click()
+    
 
-# Close the browser
-driver.quit()
+except Exception as e:
+    print(f"An error occurred: {e}")
 
+
+    
+finally:
+    # Wait for 10 seconds
+    driver.implicitly_wait(10)
+    # Close the web driver
+    driver.quit()
