@@ -92,7 +92,7 @@ else:
 
     # Enable dark mode (you may need to adjust this based on your plugin's structure)
     dark_mode_toggle = driver.find_element(By.ID, 'dark-mode-toggle')
-    if not dark_mode_toggle.is_selected():
+    if  dark_mode_toggle.is_selected():
         dark_mode_toggle.click()
         print('Dark mode is enabled')
 

@@ -48,9 +48,6 @@ wait.until(EC.presence_of_element_located((By.ID, "wp_dark_mode_switch-tab")))
 # Wait for the third switch style element to be clickable
 third_switch_style = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'input[name="wp_dark_mode_switch[switch_style]"][value="3"]')))
 
-# Scroll to the element (in case it's not in the viewport)
-driver.execute_script("arguments[0].scrollIntoView(true);", third_switch_style)
-
 # Click the third switch style
 third_switch_style.click()
 

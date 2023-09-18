@@ -24,15 +24,15 @@ jobs:
       - name: Run Tests
         working-directory: .\tests
         run: |
-          py 1_login.py
-          py 2_active.py
-          py 3_install.py
-          py 4_backend_darkmode.py
-          py 5_validate.py
-          py 6_navigate.py
-          py 7_switch_style.py
-          py 8_switch_scale.py
-          py 9_switch_position.py
-          py 10_disable_key.py
-          py 11_animation.py
-          py 12_frontend_val.py
+          python 1_login.py
+          python 2_active.py
+          python 3_install.py
+          python 4_backend_darkmode.py
+          python 5_validate.py
+          python 6_navigate.py
+          python 7_switch_style.py
+          python 8_switch_scale.py
+          python 9_switch_position.py
+          python 10_disable_key.py
+          python 11_animation.py
+          python 12_frontend_val.py

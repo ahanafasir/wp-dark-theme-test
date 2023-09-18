@@ -52,10 +52,6 @@ time.sleep(5)
 
 # Find the "Save Changes" button (replace with actual ID or XPATH) and click it
 save_changes_button = driver.find_element(By.ID, 'save_settings')  # Replace with actual ID or XPATH of Save Changes button
-
-# Scroll to the "Save Changes" button to bring it into view
-driver.execute_script("arguments[0].scrollIntoView();", save_changes_button)
-
 save_changes_button.click()
 
 
