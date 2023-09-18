@@ -53,9 +53,12 @@ animation_effect_dropdown.send_keys("Pulse")
 
 time.sleep(5) # 5secs delay
 
-# Save the settings
-save_button = driver.find_element(By.ID, "save_settings")
-save_button.click()
+parent_element = driver.find_element(By.ID, 'wp_dark_mode_animation')
+
+# Find the button element with ID 'save_settings' within the parent element
+button_element = parent_element.find_element(By.ID, 'save_settings')
+
+button_element.click()
 
 # Wait for 10 seconds before closing the browser
 time.sleep(10)

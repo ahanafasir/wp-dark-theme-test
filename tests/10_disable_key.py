@@ -50,10 +50,13 @@ if not keyboard_shortcut_toggle.is_selected():
 
 time.sleep(5)
 
-# Find the "Save Changes" button (replace with actual ID or XPATH) and click it
-save_changes_button = driver.find_element(By.ID, 'save_settings')  # Replace with actual ID or XPATH of Save Changes button
-save_changes_button.click()
+# Find the parent element by ID
+parent_element = driver.find_element(By.ID, 'wp_dark_mode_accessibility')
 
+# Find the button element with ID 'save_settings' within the parent element
+button_element = parent_element.find_element(By.ID, 'save_settings')
+
+button_element.click()
 
 # Wait for 10 seconds (adjust the wait time as needed)
 time.sleep(10)

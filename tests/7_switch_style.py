@@ -45,15 +45,18 @@ switch_settings_tab.click()
 # Wait for the "Switch Settings" tab to load
 wait.until(EC.presence_of_element_located((By.ID, "wp_dark_mode_switch-tab")))
 
-# Wait for the third switch style element to be clickable
-third_switch_style = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'input[name="wp_dark_mode_switch[switch_style]"][value="3"]')))
+# # Wait for the third switch style element to be clickable
+# third_switch_style = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'input[name="wp_dark_mode_switch[switch_style]"][value="3"]')))
 
-# Click the third switch style
-third_switch_style.click()
+# # Click the third switch style
+# third_switch_style.click()
 
-# Save the settings
-save_button = driver.find_element(By.ID, "save_settings")
-save_button.click()
+parent_element = driver.find_element(By.ID, 'wp_dark_mode_switch')
+
+# Find the button element with ID 'save_settings' within the parent element
+button_element = parent_element.find_element(By.ID, 'save_settings')
+
+button_element.click()
 
 # Wait for 10 seconds
 driver.implicitly_wait(10)

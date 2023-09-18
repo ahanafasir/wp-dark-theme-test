@@ -54,12 +54,18 @@ switch_settings_dropdown.send_keys("Left Bottom")
 # Wait for 5 seconds (or as needed)
 time.sleep(5)
 
+# # Find the "Save Changes" button (replace with actual ID or XPATH) and click it
+# save_changes_button = driver.find_element(By.ID, 'save_settings')  # Replace with actual ID or XPATH of Save Changes button
 
-# Find the "Save Changes" button (replace with actual ID or XPATH) and click it
-save_changes_button = driver.find_element(By.ID, 'save_settings')  # Replace with actual ID or XPATH of Save Changes button
+parent_element = driver.find_element(By.ID, 'wp_dark_mode_switch')
 
-# Click the "Save Changes" button
-save_changes_button.click()
+# Find the button element with ID 'save_settings' within the parent element
+button_element = parent_element.find_element(By.ID, 'save_settings')
+
+button_element.click()
+
+# # Click the "Save Changes" button
+# save_changes_button.click()
 
 
 # Wait for 10 seconds (or as needed)
