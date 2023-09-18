@@ -1,0 +1,37 @@
+name: WordPress Dark Mode Plugin Test
+
+on:
+  push:
+    branches:
+      - main # Change this to your main branch name
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x # Choose the appropriate Python version
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt # Replace with your actual requirements file
+
+      - name: Run Tests
+        run: |
+          python 1_login.py
+          python 2_active.py
+          python 3_install.py
+          python 4_backend_darkmode.py
+          python 5_validate.py
+          python 6_navigate.py
+          python 7_switch_style.py
+          python 8_switch_scale.py
+          python 9_switch_position.py
+          python 10_disable_key.py
+          python 11_animation.py
+          python 12_frontend_val.py

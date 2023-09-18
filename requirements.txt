@@ -1,0 +1,11 @@
+This test suite was coded up on windows 11 using vscode. 
+
+I used chrome and chromedriver to execute these tests.
+
+Chrome version: Version 117.0.5938.89 (Official Build) (64-bit)
+chromedriver version: Version 117.0.5938.89 (Official Build) (64-bit)
+OS: Windows 11
+
+Python packages used
+- selenium
+- dotenv

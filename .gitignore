@@ -1,0 +1,7 @@
+# .gitignore
+
+# Ignore .env file with sensitive credentials
+.env
+
+#Ignore chromedriver folder
+chromedriver-win64
