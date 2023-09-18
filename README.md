@@ -3,6 +3,10 @@
 These tests have been executed using chrome browser and chromedriver with python.
 The scripts test the given scenarios on the WP Dark Mode plugin on myy local Wordpress site powered by XAMPP.
 
+navigate to the tests folder with cd tests
+&
+use py file_name.py to run the tests
+
 ### Test 1: `1_ogin.py`
 
 **Description**: This code automates the process of logging into a WordPress admin dashboard and enabling WP Dark Mode.
