@@ -7,7 +7,7 @@ navigate to the tests folder with cd tests
 &
 use py file_name.py to run the tests
 
-### Test 1: `1_ogin.py`
+### Test 1: `1_login.py`
 
 **Description**: This code automates the process of logging into a WordPress admin dashboard and enabling WP Dark Mode.
 
