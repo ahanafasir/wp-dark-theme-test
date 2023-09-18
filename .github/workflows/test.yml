@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt # Replace with your actual requirements file
 
       - name: Run Tests
-      - working-directory: .\wp-dark-theme-test\tests
+      - working-directory: .\tests
         run: |
           python 1_login.py
           python 2_active.py
